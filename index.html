@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conversor de Créditos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Créditos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Conversor de Créditos</h1>
-    <p class="subtitulo">Verifique quantos créditos você terá após a troca.</p>
 
-    <!-- Abas de modo -->
-    <div class="tabs" id="tabs-modo">
-      <button data-mode="creditos" class="selected">Créditos</button>
-      <button data-mode="dinheiro">Reais</button>
-    </div>
+    <video autoplay muted loop id="video-background">
+        <source src="112722-695433093_medium.mp4" type="video/mp4">
+        
+    </video>
+    
+   
 
-    <!-- MODO: POR CRÉDITOS -->
-    <div data-section="creditos">
-      <div class="grupo">
-        <h2>Qual produto você possui?</h2>
-        <div class="botoes" id="origem-group">
-          <button data-type="ligacao">Ligação</button>
-          <button data-type="sms">SMS</button>
-          <button data-type="sms_flash">Flash</button>
+    <div class="container">
+        <h1>Conversor de Conversão</h1>
+        <p class="subtitulo">Calcule a conversão de créditos e custos.</p>
+
+        <div class="tabs" id="tabs-modo">
+            <button data-mode="creditos" class="selected">Converter Créditos</button>
+            <button data-mode="dinheiro">Calcular por Dinheiro</button>
         </div>
-      </div>
 
-      <div class="grupo">
-        <h2>Quantos créditos deseja transferir?</h2>
-        <input type="number" id="quantidade" placeholder="Digite a quantidade de créditos" min="1" />
-      </div>
+        <div class="secao" data-section="creditos">
+            <div class="grupo" id="origem-group">
+                <h2>Produto de Origem</h2>
+                <div class="botoes">
+                    <button data-type="ligacao">Ligação</button>
+                    <button data-type="sms">SMS</button>
+                    <button data-type="sms_flash">Flash</button>
+                </div>
+            </div>
 
-      <div class="grupo">
-        <h2>Para qual produto deseja transferir?</h2>
-        <div class="botoes" id="destino-group">
-          <button data-type="ligacao">Ligação</button>
-          <button data-type="sms">SMS</button>
-          <button data-type="sms_flash">Flash</button>
+            <div class="grupo">
+                <h2>Quantidade de Créditos</h2>
+                <input type="number" id="quantidade" placeholder="Ex: 5000">
+                <span class="hint">Informe a quantidade de créditos que você quer trocar.</span>
+            </div>
+
+            <div class="grupo" id="destino-group">
+                <h2>Converter Para</h2>
+                <div class="botoes">
+                    <button data-type="ligacao">Ligação</button>
+                    <button data-type="sms">SMS</button>
+                    <button data-type="sms_flash">Flash</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- MODO: POR DINHEIRO -->
-    <div data-section="dinheiro" class="hidden">
-      <div class="grupo">
-        <h2>Quanto dinheiro deseja converter?</h2>
-        <input
-          type="text"
-          id="valor-reais"
-          inputmode="decimal"
-          placeholder="Ex.: 705,00"
-          autocomplete="off"
-        />
-        <small class="hint">Use vírgula para centavos (p.ex. 705,00).</small>
-      </div>
+        <div class="secao hidden" data-section="dinheiro">
+            <div class="grupo" id="destino-group-dinheiro">
+                <h2>Produto de Destino</h2>
+                <div class="botoes">
+                    <button data-type="ligacao">Ligacao</button>
+                    <button data-type="sms">SMS</button>
+                    <button data-type="sms_flash">Flash</button>
+                </div>
+            </div>
 
-      <div class="grupo">
-        <h2>Para qual produto deseja converter?</h2>
-        <div class="botoes" id="destino-group-dinheiro">
-          <button data-type="ligacao">Ligação</button>
-          <button data-type="sms">SMS</button>
-          <button data-type="sms_flash">Flash</button>
+            <div class="grupo">
+                <h2>Valor em Reais</h2>
+                <input type="text" id="valor-reais" placeholder="Ex: 1000,00">
+                <span class="hint">Informe o valor em reais disponível para conversão.</span>
+            </div>
         </div>
-      </div>
+
+        <div class="botoes-acao">
+            <button onclick="calcular()">Calcular</button>
+            <button onclick="limpar()">Limpar</button>
+        </div>
+
+        <div class="resultado" id="resultado">
+        </div>
+
     </div>
 
-    <div class="botoes-acao">
-      <button onclick="calcular()">CALCULAR</button>
-      <button onclick="limpar()">LIMPAR</button>
-    </div>
-
-    <div class="resultado" id="resultado"></div>
-  </div>
-
-  <script src="conversor.js"></script>
+    <script src="conversor.js"></script>
 </body>
 </html>
