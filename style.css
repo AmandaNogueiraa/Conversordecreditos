@@ -209,6 +209,7 @@ input[type="text"] {
     MELHORIAS DE RESPONSIVIDADE
     ========================= */
 
+/* Tablets / celulares grandes */
 @media (max-width: 768px) {
     body { padding: 28px 16px; }
     .container {
@@ -234,15 +235,16 @@ input[type="text"] {
     .tabs button { padding: 10px 0; }
     .botoes { gap: 8px; }
    
-    .botoes button { flex: 1 1 calc(50% - 8px); }
+    .botoes button { flex: 1 1 100%; }
     .botoes-acao { gap: 8px; }
     .resultado { padding: 16px; }
 }
 
+
 @media (max-width: 360px) {
     h1 { font-size: 1.8rem; }
-
-    .botoes button { flex-basis: 100%; }
+    
+    .botoes button { flex-basis: 100%; } 
     .tabs { flex-wrap: wrap; }
     .tabs button { flex: 1 1 100%; }
 }
