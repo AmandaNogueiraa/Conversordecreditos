@@ -205,11 +205,7 @@ input[type="text"] {
     font-weight: 600;
 }
 
-/* =========================
-    MELHORIAS DE RESPONSIVIDADE
-    ========================= */
 
-/* Tablets / celulares grandes */
 @media (max-width: 768px) {
     body { padding: 28px 16px; }
     .container {
@@ -248,3 +244,4 @@ input[type="text"] {
     .tabs { flex-wrap: wrap; }
     .tabs button { flex: 1 1 100%; }
 }
+
