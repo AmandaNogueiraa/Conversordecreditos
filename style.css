@@ -215,11 +215,7 @@ input[type="text"] {
     font-weight: 600;
 }
 
-/* =========================
-    MELHORIAS DE RESPONSIVIDADE
-    ========================= */
 
-/* Tablets / celulares grandes */
 @media (max-width: 768px) {
     body { padding: 28px 16px; }
     .container {
@@ -232,7 +228,7 @@ input[type="text"] {
     .tabs button { font-size: 0.95rem; }
 }
 
-/* Smartphones comuns */
+
 @media (max-width: 480px) {
     body { padding: 20px 12px; }
     .container {
@@ -244,17 +240,18 @@ input[type="text"] {
     .tabs { gap: 8px; }
     .tabs button { padding: 10px 0; }
     .botoes { gap: 8px; }
-    /* duas colunas quando couber */
+    
     .botoes button { flex: 1 1 calc(50% - 8px); }
     .botoes-acao { gap: 8px; }
     .resultado { padding: 16px; }
 }
 
-/* Smartphones muito pequenos */
+
 @media (max-width: 360px) {
     h1 { font-size: 1.8rem; }
-    /* se ficar apertado: 1 botão por linha */
+ 
     .botoes button { flex-basis: 100%; }
     .tabs { flex-wrap: wrap; }
     .tabs button { flex: 1 1 100%; }
+
 }
