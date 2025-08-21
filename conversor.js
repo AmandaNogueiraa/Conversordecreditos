@@ -219,7 +219,7 @@ function limpar() {
   document.querySelectorAll("#destino-group button").forEach((b) => b.classList.remove("selected"));
   document.querySelectorAll("#destino-group-dinheiro button").forEach((b) => b.classList.remove("selected"));
 
-  // resultado
+  
   renderResultado("");
 }
 
@@ -294,3 +294,4 @@ document.addEventListener("DOMContentLoaded", setupSeletores);
 
 window.calcular = calcular;
 window.limpar = limpar;
+
