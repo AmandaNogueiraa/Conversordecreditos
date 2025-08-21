@@ -31,7 +31,9 @@ body {
     box-shadow: 0 28px 40px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 760px;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    position: relative;
 }
 
 h1 {
@@ -119,10 +121,10 @@ h2 {
     color: #222;
 }
 
+
 input[type="number"],
 input[type="text"] {
-<<<<<<< HEAD
-    width: 96%;
+    width: 100%;
     padding: 12px;
     font-size: 1rem;
     border-radius: 12px;
@@ -132,22 +134,10 @@ input[type="text"] {
     color: #333;
     font-weight: 500;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-=======
-  width: 96%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  background-color: #fff;
-  color: #333;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
->>>>>>> e0cfb4ef8a5cd6bd663edb1b3b5524679bf9f7c8
 }
 
 .hint {
-    display: inline-block;
+    display: block;
     margin-top: 6px;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
@@ -215,6 +205,10 @@ input[type="text"] {
     font-weight: 600;
 }
 
+/* =========================
+    MELHORIAS DE RESPONSIVIDADE
+    ========================= */
+
 @media (max-width: 768px) {
     body { padding: 28px 16px; }
     .container {
@@ -239,16 +233,15 @@ input[type="text"] {
     .tabs { gap: 8px; }
     .tabs button { padding: 10px 0; }
     .botoes { gap: 8px; }
-    
+   
     .botoes button { flex: 1 1 calc(50% - 8px); }
     .botoes-acao { gap: 8px; }
     .resultado { padding: 16px; }
 }
 
-
 @media (max-width: 360px) {
     h1 { font-size: 1.8rem; }
-    
+
     .botoes button { flex-basis: 100%; }
     .tabs { flex-wrap: wrap; }
     .tabs button { flex: 1 1 100%; }
