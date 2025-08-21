@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #E47F83;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -41,14 +41,14 @@ h1 {
     font-weight: 700;
     margin-bottom: 0.25rem;
     text-align: center;
-    color: #E47F83;
+    color: #ffffff;
 }
 
 .subtitulo {
     text-align: center;
     font-size: 1rem;
     margin-bottom: 1.2rem;
-    color:#E47F83
+    color:#ffffff
 }
 
 h2 {
@@ -198,8 +198,8 @@ input[type="text"] {
 
 .erro {
     background: #ffe6e6;
-    color: #E47F83;
-    border: 1px solid #e8ae96;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     padding: 12px 14px;
     border-radius: 12px;
     font-weight: 600;
@@ -244,4 +244,3 @@ input[type="text"] {
     .tabs { flex-wrap: wrap; }
     .tabs button { flex: 1 1 100%; }
 }
-
